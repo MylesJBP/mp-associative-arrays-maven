@@ -1,7 +1,9 @@
 Associative Arrays
 ==================
+Myles Bohrer-Purnell
+CSC207 2024Fa - Samuel Rebelsky
+10/2/2024
 
-Starter code for a CSC-207 project on associative arrays.
+Implementation of Mini-Project 4, associative arrays.
 
-_Students must replace the contents of this file with appropriate
-contents, including class, author, date, and URL._
+URL to GitHub Repository: <[https://github.com/MylesJBP mp-associative-arrays-maven]>
