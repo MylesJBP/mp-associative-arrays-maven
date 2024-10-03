@@ -15,7 +15,7 @@ public class AAExperiments {
   // +---------+-----------------------------------------------------
   // | Globals |
   // +---------+
-  
+
   /**
    * Log and conduct a call to `set`.
    *
@@ -28,7 +28,7 @@ public class AAExperiments {
    * @param val
    *   The value to set.
    */
-  public static void set(PrintWriter pen, AssociativeArray<String, String> aa, 
+  public static void set(PrintWriter pen, AssociativeArray<String, String> aa,
       String key, String val) {
     pen.printf("set(\"%s\", \"%s\") -> ", key, val);
     try {
@@ -69,7 +69,7 @@ public class AAExperiments {
    * @param key
    *   The key.
    */
-  public static void hasKey(PrintWriter pen, 
+  public static void hasKey(PrintWriter pen,
       AssociativeArray<String, String> aa, String key) {
     pen.printf("hasKey(\"%s\") -> ", key);
     try {
@@ -96,7 +96,7 @@ public class AAExperiments {
   public static void main(String[] args) throws Exception {
     PrintWriter pen = new PrintWriter(System.out, true);
 
-    AssociativeArray strings2strings = new AssociativeArray<String,String>();
+    AssociativeArray strings2strings = new AssociativeArray<String, String>();
 
     // The empty array should not have any key. We'll try one.
     hasKey(pen, strings2strings, "k");
@@ -114,7 +114,7 @@ public class AAExperiments {
     set(pen, strings2strings, null, "nothing");
     hasKey(pen, strings2strings, null);
     get(pen, strings2strings, null);
-    
+
     // And we're done.
     pen.close();
   } // main(String[])
