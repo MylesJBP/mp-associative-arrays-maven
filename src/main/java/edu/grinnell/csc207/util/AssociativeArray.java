@@ -62,9 +62,12 @@ public class AssociativeArray<K, V> {
    * @return a new copy of the array
    */
   public AssociativeArray<K, V> clone() {
-    AssociativeArray copyArray = new AssociativeArray<K, V>();
-    copyArray.pairs = this.pairs;
-    copyArray.size = this.size;
+    AssociativeArray<K, V> copyArray = new AssociativeArray<K, V>();
+    copyArray.size = this.size();
+    for(int i = 0; i < this.size; i++){
+      copyArray.expand();
+      copyArray.pairs[i] = new KVPair<K,V>(this.pairs[i].key, this.pairs[i].val);
+    }
     return copyArray;
   } // clone()
 

@@ -1,8 +1,8 @@
 package edu.grinnell.csc207.experiments;
 
-import edu.grinnell.csc207.util.AssociativeArray;
-
 import java.io.PrintWriter;
+
+import edu.grinnell.csc207.util.AssociativeArray;
 
 /**
  * Experiments with Associative Arrays.
