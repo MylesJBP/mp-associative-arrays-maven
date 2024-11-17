@@ -730,14 +730,14 @@ public class TestAssociativeArrays {
     // change the key/value pair of clone
     arrClone.set("Wood", "Chip");
     try {
-      assertEquals("Chip", arr.get("Wood"));
+      assertEquals("Chip", arrClone.get("Wood"));
     } catch (Exception e) {
       fail("Cloned array does not contain the expected value");
     } // try/catch
     // change key, pair value
     arrClone.set("Wood", "Chipmonk");
     try {
-      assertEquals("Chipmonk", arr.get("Wood"));
+      assertEquals("Chipmonk", arrClone.get("Wood"));
     } catch (Exception e) {
       fail("Cloned array does not contain the expected value");
     } // try/catch

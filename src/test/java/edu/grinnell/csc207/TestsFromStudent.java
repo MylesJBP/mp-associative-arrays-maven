@@ -50,7 +50,7 @@ public class TestsFromStudent {
     // change key, pair value
     arrClone.set("Wood", "Chipmonk");
     try {
-      assertEquals("Chipmonk", arr.get("Wood"));
+      assertEquals("Chipmonk", arrClone.get("Wood"));
     } catch (Exception e) {
       fail("Cloned array does not contain the expected value");
     } // try/catch
