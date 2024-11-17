@@ -1,0 +1,32 @@
+# Changes Checklist for MP4 Redo
+Myles Bohrer-Purnell
+CSC-207 2024Fa
+Samuel Rebelsky
+--- 
+The comments for my initial submission of MP4 were as follows:
+
+1. You have 40 checkstyle errors. I recommend just going through your checkstyle errors and fixing them.
+Sam provided a checker for this.
+
+I fixed this issue by simply going through the mvn checkstyle:check checkstyle errors and fixing all 40 of them.
+
+2. A significant amount of JUnit tests failed. The main problem seems to be
+that the java heap space was filled up too much, which caused java to freak out.
+Check on your methods again, and try to fix anywhere where excess space is being allocated.
+
+I realized that the issue was the I was expanding my array after I set any element in my "set" method
+and my "clone" method, causing an overflow of allocated space. Therefore, I added try/catch statements
+in each of those methods so that it will try to add the element to the array, than only expand the size of it if
+that doesn't work because enough space hasn't already been allocated. To my knowledge, this fixed the issue given
+that it allowed all of the JUnit tests to run and pass.
+
+3. The toString method seems not to work.
+
+I realized that I was not adding ", " after each kay/value pair in my AA, which made my toString
+output incorrect, so I added an if statement that added that after every pair except the last one.
+This fixed the issue.
+
+Additional Things I added:
+
+I added an extra experiment in AAExperiments.java to test my toString method and subsequently
+added my name to the top of the file.
