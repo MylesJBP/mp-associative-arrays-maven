@@ -8,7 +8,7 @@ import edu.grinnell.csc207.util.AssociativeArray;
  * Experiments with Associative Arrays.
  *
  * @author Samuel A. Rebelsky
- * @author Your Name Here
+ * @author Myles Bohrer-Purnell
  */
 public class AAExperiments {
 
@@ -103,7 +103,9 @@ public class AAExperiments {
 
     // However, after setting that key, we should be able to get it.
     set(pen, strings2strings, "k", "key");
+    set(pen, strings2strings, "map", "key");
     hasKey(pen, strings2strings, "k");
+    pen.println(strings2strings.toString());
     get(pen, strings2strings, "k");
 
     // What happens if we try a different key?
